@@ -7,7 +7,7 @@ import reducer from "../reducers";
 const App = () => {
     console.log("here");
     const [balance, setBalance] = useState(0);
-    const [users, dispatch] = useReducer(reducer, { users: [], balance: 0 });
+    const [users, dispatch] = useReducer(reducer, []);
     return (
         <div id="main">
             <AddUser
