@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const reducer = (state, action) => {
   switch (action.type) {
       
-    case 'add' :
+    /*case 'add' :
       const nUser = {
         id: uuidv4(),
         name: action.name,
@@ -28,6 +28,11 @@ const reducer = (state, action) => {
 
       default : 
         return state;
+  }*/
+    case 'add' : {
+      const cState = [...state, {name: action.name}]
+      return cState;
+    }
   }
 }
 
