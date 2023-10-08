@@ -10,15 +10,15 @@ const reducer = (state, action) => {
       }
       return {
         ...state,
-        walletBalance: state.walletBallance + 10,
+        wallet: state.wallet + 10,
         users: [...state.users, newUser],
       };
 
     case 'fuel' :
-      if(state.walletBalance >= 50) {
+      if(state.wallet >= 50) {
         return {
           ...state,
-          walletBalance: state.walletBalance - 50,
+          wallet: state.wallet - 50,
         };
       }
       return state;
