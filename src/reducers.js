@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 const reducer = (state, action) => {
   switch (action.type) {
       
-    case 'ADD_USER' :
+    case 'user' :
       const newUser = {
         id: uuidv4(),
         name: action.name,
@@ -14,7 +14,7 @@ const reducer = (state, action) => {
         users: [...state.users, newUser],
       };
 
-    case 'HANDLE_FUEL' :
+    case 'fuel' :
       if(state.walletBalance >= 50) {
         return {
           ...state,
