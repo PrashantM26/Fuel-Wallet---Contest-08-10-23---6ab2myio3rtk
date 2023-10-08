@@ -4,21 +4,22 @@ const reducer = (state, action) => {
   switch (action.type) {
       
     case 'add' :
-      const newUser = {
+      const nUser = {
         id: uuidv4(),
         name: action.name,
       }
+      const nBalance = action.balance + 10;
       return {
-        ...state,
-        wallet: state.wallet + 10,
+        balance: nBalance,
         users: [...state.users, newUser],
       };
 
     case 'fuel' :
-      if(state.wallet >= 50) {
+      if(state.balance >= 50) {
+        const nBalanceFuel = action.balance - 50;
         return {
           ...state,
-          wallet: state.wallet - 50,
+          balance: nBalanceFuel,
         };
       }
       return state;
