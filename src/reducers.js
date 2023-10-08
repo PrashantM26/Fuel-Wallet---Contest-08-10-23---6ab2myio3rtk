@@ -8,20 +8,20 @@ const reducer = (state, action) => {
         id: uuidv4(),
         name: action.name,
       }
-      //const nBalance = action.balance + 10;
-      action.setBalance((e) => e + 10);
+      const nBalance = action.balance + 10;
+      action.setBalance(nBalance);
       return {
-        balance: action.balance,
+        balance: nBalance,
         users: [...state.users, nUser],
       };
 
     case 'fuel' :
       if(state.balance >= 50) {
-        //const nBalanceFuel = action.balance - 50;
-        action.setBalance((e) => e - 50);
+        const nBalanceFuel = action.balance - 50;
+        action.setBalance(nBalanceFuel);
         return {
           ...state,
-          balance: action.balance,
+          balance: nBalanceFuel,
         };
       }
       return state;
