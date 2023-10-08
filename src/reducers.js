@@ -21,7 +21,7 @@ const reducer = (state, action) => {
           walletBalance: state.walletBalance - 50,
         };
       }
-      return stste;
+      return state;
 
       default : 
         return state;
