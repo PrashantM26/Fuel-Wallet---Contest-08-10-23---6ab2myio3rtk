@@ -12,7 +12,7 @@ const reducer = (state, action) => {
       action.setBalance((e) => e + 10);
       return {
         balance: action.balance,
-        users: [...state.users, newUser],
+        users: [...state.users, nUser],
       };
 
     case 'fuel' :
