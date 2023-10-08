@@ -6,7 +6,7 @@ function AddUser({ dispatch, setBalance, balance }) {
     function handleClick(e) {
         e.preventDefault();
         dispatch({ type: "add", name, setBalance, balance });
-        setBalance((e) => e + 10);
+        //setBalance((e) => e + 10);
         setName("");
     }
 
